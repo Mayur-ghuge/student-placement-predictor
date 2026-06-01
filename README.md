@@ -74,4 +74,4 @@ Developed as part of my Artificial Intelligence Internship at Extech Digital & E
 
 ## 👨‍💻 Developer
 
-Mayur Ghuge**
+Mayur Ghuge
