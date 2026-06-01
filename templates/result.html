@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">🎓 PlacementPredictor</div>
+
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/predict">Predict</a></li>
+        <li><a href="/analytics">Analytics</a></li>
+        <li><a href="/history">History</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</nav>
+
+<div class="predict-container">
+
+    <div class="result-card">
+
+        <h1>🎯 Prediction Result</h1>
+
+        {% if result == "Likely To Be Placed" %}
+
+            <div class="result-badge success">
+                🟢 Likely To Be Placed
+            </div>
+
+        {% else %}
+
+            <div class="result-badge danger">
+                🔴 Not Likely To Be Placed
+            </div>
+
+        {% endif %}
+
+        <h3>Placement Probability</h3>
+
+        <div class="probability-circle">
+            {{ probability }}%
+        </div>
+
+        <a href="/predict">
+            <button class="btn-primary">
+                Predict Again
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

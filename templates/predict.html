@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Placement</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">🎓 PlacementPredictor</div>
+
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/predict">Predict</a></li>
+            <li><a href="/analytics">Analytics</a></li>
+            <li><a href="/history">History</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="predict-container">
+
+        <h1>Student Placement Prediction</h1>
+
+        <form action="/predict" method="POST">
+
+            <input type="text" name="student_name" placeholder="Student Name">
+
+            <input type="text" name="department" placeholder="Department">
+
+            <input type="number" step="0.01" name="cgpa" placeholder="CGPA">
+
+            <input type="number" name="aptitude" placeholder="Aptitude Score">
+
+            <input type="number" name="communication" placeholder="Communication Score">
+
+            <input type="number" name="coding" placeholder="Coding Score">
+
+            <input type="number" name="projects" placeholder="Projects">
+
+            <input type="number" name="internships" placeholder="Internships">
+
+            <input type="number" name="backlogs" placeholder="Backlogs">
+
+            <button type="submit">
+                Predict Placement
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

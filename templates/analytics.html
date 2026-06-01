@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analytics Dashboard</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">🎓 PlacementPredictor</div>
+
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/predict">Predict</a></li>
+        <li><a href="/analytics">Analytics</a></li>
+        <li><a href="/history">History</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</nav>
+
+<div class="predict-container">
+
+    <h1>Analytics Dashboard</h1>
+
+    <div class="stats">
+
+        <div class="card">
+            <h2>{{ total }}</h2>
+            <p>Total Predictions</p>
+        </div>
+
+        <div class="card">
+            <h2>{{ placed }}</h2>
+            <p>Placed</p>
+        </div>
+
+        <div class="card">
+            <h2>{{ not_placed }}</h2>
+            <p>Not Placed</p>
+        </div>
+
+        <div class="card">
+            <h2>{{ avg_probability }}%</h2>
+            <p>Avg Probability</p>
+        </div>
+
+    </div>
+
+    <h2 style="margin-top:40px;text-align:center;">
+    Placement Analysis
+</h2>
+
+<div style="margin-top:30px;">
+    <canvas id="placementChart"></canvas>
+</div>
+
+</div>
+
+<script>
+
+const ctx = document.getElementById('placementChart');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Placed', 'Not Placed'],
+        datasets: [{
+            label: 'Students',
+            data: [{{ placed }}, {{ not_placed }}],
+            backgroundColor: [
+                '#8b5cf6',
+                '#475569'
+            ],
+            borderRadius: 10
+        }]
+    },
+    options: {
+        responsive: true,
+
+        plugins: {
+            legend: {
+                labels: {
+                    color: 'white'
+                }
+            }
+        },
+
+        scales: {
+
+            x: {
+                ticks: {
+                    color: 'white'
+                }
+            },
+
+            y: {
+                beginAtZero: true,
+                ticks: {
+                    color: 'white'
+                }
+            }
+        }
+    }
+});
+
+</script>
+
+</body>
+</html>

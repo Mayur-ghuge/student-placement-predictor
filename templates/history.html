@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">🎓 PlacementPredictor</div>
+
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/predict">Predict</a></li>
+        <li><a href="/analytics">Analytics</a></li>
+        <li><a href="/history">History</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</nav>
+
+<div class="predict-container">
+
+    <h1>Prediction History</h1>
+
+    <table class="history-table">
+
+        <tr>
+            <th>Sr No</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>CGPA</th>
+            <th>Result</th>
+            <th>Probability</th>
+        </tr>
+
+        {% for row in predictions %}
+
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ row.student_name }}</td>
+            <td>{{ row.department }}</td>
+            <td>{{ row.cgpa }}</td>
+            {% if row.prediction_result == "Likely To Be Placed" %}
+<td class="placed">
+    🟢 Placed
+</td>
+{% else %}
+<td class="not-placed">
+    🔴 Not Placed
+</td>
+{% endif %}
+            <td class="probability">
+    {{ row.probability }}%
+</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+</body>
+</html>
