@@ -1,35 +1,68 @@
 # 🎓 Student Placement Prediction System
 
-An AI-powered web application that predicts a student's placement chances using Machine Learning.
+An AI-powered Machine Learning web application that predicts a student's placement chances based on academic performance, technical skills, projects, internships, and backlogs.
+
+🌐 **Live Demo:**
+https://student-placement-predictor-gp7i.onrender.com
+
+---
 
 ## 🚀 Features
 
-- Placement Prediction
-- Prediction Probability Score
-- Analytics Dashboard
-- Prediction History
-- MySQL Database Integration
-- Responsive UI
+* AI-Based Placement Prediction
+* Placement Probability Score
+* Analytics Dashboard
+* Prediction History Tracking
+* MySQL Database Integration
+* Responsive User Interface
+* Cloud Deployment using Render & Railway
+
+---
 
 ## 🛠️ Tech Stack
 
-- Python
-- Flask
-- MySQL
-- Scikit-Learn
-- HTML
-- CSS
-- JavaScript
+### Frontend
+
+* HTML
+* CSS
+* JavaScript
+
+### Backend
+
+* Python
+* Flask
+
+### Machine Learning
+
+* Scikit-Learn
+* Random Forest Classifier
+* Pandas
+* NumPy
+
+### Database
+
+* MySQL (Railway)
+
+### Deployment
+
+* Render
+* Railway
+
+---
 
 ## 📊 Input Parameters
 
-- CGPA
-- Aptitude Score
-- Communication Score
-- Coding Score
-- Projects
-- Internships
-- Backlogs
+The prediction model evaluates:
+
+* CGPA
+* Aptitude Score
+* Communication Score
+* Coding Score
+* Projects
+* Internships
+* Backlogs
+
+---
 
 ## 📸 Screenshots
 
@@ -43,35 +76,69 @@ An AI-powered web application that predicts a student's placement chances using 
 
 ### Prediction Result
 
-![Result](screenshots/result.png)
+![Prediction Result](screenshots/result.png)
 
 ### Analytics Dashboard
 
-![Analytics](screenshots/analytics.png)
+![Analytics Dashboard](screenshots/analytics.png)
 
 ### Prediction History
 
-![History](screenshots/history.png)
+![Prediction History](screenshots/history.png)
 
-## ▶️ Run Project
-
-bash
-pip install -r requirements.txt
-python app.py
-
-
-Open:
-
-
-http://127.0.0.1:5000
-
-## 🏆 Internship
-
-Developed as part of my Artificial Intelligence Internship at Extech Digital & Edu-versity (Apr 2025 – Jun 2025), focusing on Machine Learning, Flask, and MySQL-based application development.
-## 📜 Internship Certificate
+### Internship Certificate
 
 ![Internship Certificate](screenshots/internship_certificate.png)
 
+---
+
+## 📈 Machine Learning Workflow
+
+1. Dataset Generation
+2. Data Preprocessing
+3. Model Training using Random Forest Classifier
+4. Model Evaluation
+5. Prediction Generation
+6. Database Storage
+7. Analytics Visualization
+
+---
+
+## ▶️ Run Locally
+
+```bash
+pip install -r requirements.txt
+python app.py
+```
+
+Open:
+
+```text
+http://127.0.0.1:5000
+```
+
+---
+
+## 🏆 Internship Project
+
+This project was developed during my **Artificial Intelligence Internship** at **Extech Digital & Edu-versity (Apr 2025 – Jun 2025)**.
+
+The project provided hands-on experience in:
+
+* Machine Learning
+* Flask Web Development
+* MySQL Database Management
+* Model Deployment
+* Full Project Development Lifecycle
+
+---
+
 ## 👨‍💻 Developer
 
-Mayur Ghuge
+**Mayur Ghuge**
+
+Aspiring Software Developer | Machine Learning Enthusiast | Full Stack Learner
+
+GitHub: https://github.com/Mayur-ghuge
+
+LinkedIn: https://www.linkedin.com/in/mayur-ghuge-576b14290/
