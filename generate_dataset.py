@@ -14,16 +14,16 @@ for _ in range(200):
     backlogs = random.randint(0, 5)
 
     score = (
-        cgpa * 12
-        + aptitude * 0.30
-        + communication * 0.20
-        + coding * 0.35
-        + projects * 6
+        cgpa * 10
+        + aptitude * 0.20
+        + communication * 0.15
+        + coding * 0.25
+        + projects * 5
         + internships * 8
-        - backlogs * 5
+        - backlogs * 10
     )
 
-    placed = 1 if score >= 105 else 0
+    placed = 1 if score >= 115 else 0
 
     data.append([
         cgpa,
@@ -52,4 +52,4 @@ df = pd.DataFrame(
 
 df.to_csv("dataset/placement_data.csv", index=False)
 
-print("200-row dataset generated successfully!")
+print("Dataset generated successfully!")
