@@ -45,15 +45,25 @@ def predict():
             backlogs
         ]])
 
-        # Prediction
+                # Prediction
         prediction = model.predict(features)[0]
 
         # Placement Probability
-        probabilities = model.predict_proba(features)[0]
+        try:
+            probabilities = model.predict_proba(features)[0]
 
-        probability = round(
-            probabilities[1] * 100,
-            2
+            if len(probabilities) > 1:
+                probability = round(probabilities[1] * 100, 2)
+            else:
+                probability = round(probabilities[0] * 100, 2)
+
+        except Exception:
+            probability = 50.0
+
+        result = (
+            "Likely To Be Placed"
+            if prediction == 1
+            else "Not Likely To Be Placed"
         )
 
         result = (
